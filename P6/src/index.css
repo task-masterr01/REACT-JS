@@ -1,0 +1,241 @@
+ Reset & Base Styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1b517e, #0a2540);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Container */
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid #003366;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Navbar */ 
+.navbar {
+    background-color: #d1d5db;
+    border: 2px solid #333;
+    border-radius: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+  width: 70%;
+    display: flex;
+    gap: 25px;
+    justify-content: space-evenly;
+}
+
+.nav-links a {
+  
+    text-decoration: none;
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 13%;
+    gap: 20px;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #111;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Simple CSS User Icon Representation  */
+.profile-icon::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 6px;
+    width: 20px;
+    height: 10px;
+    background-color: #d1d5db;
+    border-radius: 10px 10px 0 0;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #111;
+    border-radius: 2px;
+}
+
+/* Main Two-Column Layout  */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    height: auto;
+}
+
+/* Column Header Styling  */
+.section-header {
+    background-color: #9ca3af;
+    color: #111;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid layout for Cards inside Columns  */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Card Foundations  */
+.card {
+    background-color: #eaeaea;
+    border-radius: 6px;
+    border: 2px solid #4b5563;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+/* Active Configuration  */
+.active-card {
+    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+/* Gray/White Abstract Grid Placeholders  */
+.placeholder-card {
+    background: linear-gradient(135deg, #f3f4f6 25%, #e5e7eb 100%);
+    opacity: 0.85;
+}
+
+/* Top Meta Row of Card  */
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #facc15;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #111;
+    font-size: 1rem;
+}
+
+.badge {
+    background-color: #facc15;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.mini-text {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+}
+
+.more-options {
+    margin-left: auto;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Main Display Area in Active Card  */
+.card-body-blue {
+    background-color: #60a5fa;
+    border: 2px solid #2563eb;
+    flex-grow: 1;
+    min-height: 65px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* Bottom Action Buttons Row  */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #111;
+}
+
+.btn-outline {
+    background-color: #fff;
+    color: #111;
+}
+
+.btn-orange {
+    background-color: #f97316;
+    color: #fff;
+}
+
+/* Responsive Scaling for smaller displays  */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none; /* Fallback for simple layout visibility */
+    }
+} 
+    
