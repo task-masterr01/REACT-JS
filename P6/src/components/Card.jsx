@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Card({ isActive, type, name, badgeText }) {
+export default function Card({  }) {
   // If it's just an empty placeholder card
   if (!isActive) {
     return <div className="card placeholder-card"></div>;

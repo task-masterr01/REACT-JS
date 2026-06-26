@@ -1,4 +1,5 @@
- Reset & Base Styles
+@import "tailwindcss";
+Reset & Base Styles
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,29 +59,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 13%;
+    width: auto;
     gap: 20px;
 }
 
 .profile-icon {
     width: 32px;
     height: 32px;
-    background-color: #111;
+    border: 1.5px solid black;
     border-radius: 50%;
     position: relative;
 }
 
-/* Simple CSS User Icon Representation  */
-.profile-icon::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 6px;
-    width: 20px;
-    height: 10px;
-    background-color: #d1d5db;
-    border-radius: 10px 10px 0 0;
+.profile-icon img{ 
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    
+    
+   
 }
+
 
 .hamburger-menu {
     display: flex;
@@ -159,9 +159,8 @@ body {
 }
 
 .status-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #facc15;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid #333;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card';
 import './Dashboard'; // Import your styles here
+import userLineIcon from '../assets/user-line.png';
+import { empData, clientData } from '../userData';
 
 export default function Dashboard() {
   const navItems = ['Home', 'Expenses', 'Income', 'Revenue', 'Users', 'Team'];
   
-  // Quick arrays to map out the 5 placeholder cards per section
-  const placeholders = Array(5).fill(null);
 
   return (
     <div className="dashboard-container">
@@ -21,7 +21,9 @@ export default function Dashboard() {
           ))}
         </div>
         <div className="nav-icons">
-          <div className="profile-icon"></div>
+          <div className="profile-icon"> 
+            <img src={userLineIcon} alt="User Profile "/>
+          </div>
           <div className="hamburger-menu">
             <span></span>
             <span></span>
@@ -38,9 +40,13 @@ export default function Dashboard() {
           <div className="section-header">Employees</div>
           <div className="card-grid">
             {/* Active Card */}
-            <Card isActive={true} type="employee" name="Name" badgeText="Post" />
-            {/* 5 Placeholders */}
-            {placeholders.map((_, idx) => <Card key={`emp-empty-${idx}`} isActive={false} />)}
+            <Card   />
+            <Card    />
+            <Card    />
+            <Card    />
+            <Card    />
+            <Card    />
+           
           </div>
         </section>
 
@@ -49,9 +55,14 @@ export default function Dashboard() {
           <div className="section-header">Clients</div>
           <div className="card-grid">
             {/* Active Card */}
-            <Card isActive={true} type="client" name="Name" badgeText="Company name" />
+            <Card  />
+            <Card  />
+            <Card  />
+            <Card  />
+            <Card  />
+            <Card  />
             {/* 5 Placeholders */}
-            {placeholders.map((_, idx) => <Card key={`cli-empty-${idx}`} isActive={false} />)}
+           
           </div>
         </section>
 
