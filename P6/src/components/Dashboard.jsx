@@ -39,14 +39,9 @@ export default function Dashboard() {
         <section className="section-column">
           <div className="section-header">Employees</div>
           <div className="card-grid">
-            {/* Active Card */}
-            <Card   />
-            <Card    />
-            <Card    />
-            <Card    />
-            <Card    />
-            <Card    />
-           
+            {empData?.map((emp, index) => (
+              <Card key={`emp-${index}`} type="employee" data={emp} />
+            ))}
           </div>
         </section>
 
@@ -54,14 +49,9 @@ export default function Dashboard() {
         <section className="section-column">
           <div className="section-header">Clients</div>
           <div className="card-grid">
-            {/* Active Card */}
-            <Card  />
-            <Card  />
-            <Card  />
-            <Card  />
-            <Card  />
-            <Card  />
-            {/* 5 Placeholders */}
+           {clientData?.map((client, index) => (
+              <Card key={`client-${index}`} type="client" data={client} />
+            ))}
            
           </div>
         </section>
