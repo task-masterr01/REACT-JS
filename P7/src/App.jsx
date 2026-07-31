@@ -22,7 +22,7 @@ const App = () => {
 
          <button onClick={increaseCount}>increse count</button>
          <br />
-         <button onClick={decreaseCount}>decrese count</button>
+0         <button onClick={decreaseCount}>decrese count</button>
          <br />
          <button onClick={resetCount}> Reset count</button>
     </main>
