@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import './App.css'
+import InputBox from './components/InputBox'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     < >
-      <h1 className='text-3xl bg-black'>currency converter Project</h1>
+      <InputBox></InputBox>
+      <InputBox></InputBox>
     </>
+    
   )
 }
 
