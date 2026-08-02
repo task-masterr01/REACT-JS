@@ -92,7 +92,7 @@ function App() {
                 setCharAloow((prev) => !prev);
               }}
           />
-          <label htmlFor="charInput">Numbers</label>
+          <label htmlFor="charInput">Characters</label>
         </div>
       </div>
 
