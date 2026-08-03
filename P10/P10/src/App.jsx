@@ -8,6 +8,7 @@ function App() {
   return (
     < >
       <InputBox></InputBox>
+      
       <InputBox></InputBox>
     </>
     

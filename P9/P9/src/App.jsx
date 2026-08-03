@@ -12,6 +12,7 @@ function App() {
 
   const passwordGenerator = useCallback(
     () => {
+      
       let pass = ""
       let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
       if(numallow) str += "0123456789"
