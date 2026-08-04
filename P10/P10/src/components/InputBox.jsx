@@ -1,15 +1,15 @@
 import React, { useId } from 'react';
 
 function InputBox({
-    label,
-    amount,
-    onAmountChange,
-    onCurrencyChange,
     currencyOptions = [],
     selectCurrency = "usd",
     amountDisable = false,
     currencyDisable = false,
     className = "",
+    label,
+    amount,
+    onAmountChange,
+    onCurrencyChange,
 }) {
     const amountInputId = useId();
 
